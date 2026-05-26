@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>STRIDE — sklep sportowy</title>
+	<meta name="description" content="Nowoczesny, interaktywny sklep sportowy z wirtualnymi zakupami, logowaniem i regulaminem.">
+	<link rel="stylesheet" href="main.css">
+	<script defer src="app.js"></script>
+</head>
+<body data-page="home">
+	<header class="topbar">
+		<a class="brand" href="mian.html" aria-label="STRIDE - strona główna">
+			<span class="brand-mark">S</span>
+			<span class="brand-text">STRIDE</span>
+		</a>
+
+		<nav class="nav">
+			<a href="#kolekcja">Kolekcja</a>
+			<a href="#doswiadczenie">Doświadczenie</a>
+			<a href="regulamin.html">Regulamin</a>
+			<a href="login.html" class="nav-login-link">Logowanie</a>
+		</nav>
+
+		<div class="topbar-actions">
+			<div class="user-chip" data-user-chip>
+				<span class="user-dot"></span>
+				<span data-user-label>Gość</span>
+			</div>
+			<button class="icon-button" type="button" data-open-cart aria-label="Otwórz koszyk">
+				Koszyk <span class="badge" data-cart-count>0</span>
+			</button>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero" id="start">
+			<div class="hero-copy reveal">
+				<span class="eyebrow">Nowa era sportu</span>
+				<h1>Ubierz się w styl, który przyspiesza ruch.</h1>
+				<p>
+					Ekskluzywna, interaktywna kolekcja inspirowana światem performance.
+					Przeglądaj produkty, wchodź w szczegóły, dodawaj do koszyka i kupuj
+					w pełni wirtualnie.
+				</p>
+
+				<div class="hero-actions">
+					<a class="primary-button" href="#kolekcja">Zobacz produkty</a>
+					<a class="secondary-button" href="login.html">Zaloguj się</a>
+				</div>
+
+				<div class="stats">
+					<article>
+						<strong>48h</strong>
+						<span>na stylową premierę</span>
+					</article>
+					<article>
+						<strong>100%</strong>
+						<span>wirtualna finalizacja</span>
+					</article>
+					<article>
+						<strong>24/7</strong>
+						<span>podgląd kolekcji</span>
+					</article>
+				</div>
+			</div>
+
+			<div class="hero-visual reveal">
+				<div class="pulse-orbit"></div>
+				<div class="showcase-card floating-card">
+					<span class="showcase-label">Featured drop</span>
+					<h2>Velocity Runner X</h2>
+					<p>Responsywna amortyzacja, lekka sylwetka i mocny wygląd.</p>
+					<div class="showcase-price">od 499 zł</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="toolbar reveal" id="kolekcja">
+			<div>
+				<span class="section-tag">Kolekcja</span>
+				<h2>Produkty premium</h2>
+			</div>
+
+			<div class="filters" role="tablist" aria-label="Filtry produktów">
+				<button class="filter-button active" type="button" data-filter="all">Wszystko</button>
+				<button class="filter-button" type="button" data-filter="buty">Buty</button>
+				<button class="filter-button" type="button" data-filter="odziez">Odzież</button>
+				<button class="filter-button" type="button" data-filter="akcesoria">Akcesoria</button>
+			</div>
+
+			<label class="search-box">
+				<span>Szukaj</span>
+				<input type="search" placeholder="np. runner, kurtka..." data-search>
+			</label>
+		</section>
+
+		<section class="products-grid reveal" data-products-grid></section>
+
+		<section class="experience reveal" id="doswiadczenie">
+			<div>
+				<span class="section-tag">Doświadczenie</span>
+				<h2>Interaktywny sklep z wirtualnym zakupem</h2>
+			</div>
+			<div class="experience-cards">
+				<article>
+					<h3>Wejście w produkt</h3>
+					<p>Każdy produkt otwiera szczegółowy podgląd z ceną i opisem.</p>
+				</article>
+				<article>
+					<h3>Wirtualny koszyk</h3>
+					<p>Dodawaj rzeczy do koszyka i finalizuj zamówienie bez płatności.</p>
+				</article>
+				<article>
+					<h3>Zapamiętywanie sesji</h3>
+					<p>Logowanie i koszyk zapisują się lokalnie po zamknięciu strony.</p>
+				</article>
+			</div>
+		</section>
+	</main>
+
+	<aside class="cart-drawer" data-cart-drawer aria-label="Koszyk">
+		<div class="cart-header">
+			<h2>Koszyk</h2>
+			<button class="icon-button subtle" type="button" data-close-cart>✕</button>
+		</div>
+		<div class="cart-items" data-cart-items></div>
+		<div class="cart-summary">
+			<div>
+				<span>Suma</span>
+				<strong data-cart-total>0 zł</strong>
+			</div>
+			<button class="primary-button full-width" type="button" data-checkout>
+				Finalizuj wirtualnie
+			</button>
+			<p class="cart-note">To demo nie generuje prawdziwej płatności ani zamówienia.</p>
+		</div>
+	</aside>
+
+	<div class="overlay" data-overlay></div>
+
+	<div class="modal" data-product-modal aria-hidden="true">
+		<div class="modal-card">
+			<button class="icon-button subtle modal-close" type="button" data-close-modal>✕</button>
+			<div class="modal-content">
+				<div class="modal-visual" data-modal-visual></div>
+				<div class="modal-copy">
+					<span class="section-tag" data-modal-category>Produkt</span>
+					<h2 data-modal-title>Produkt</h2>
+					<p data-modal-description></p>
+					<ul class="feature-list" data-modal-features></ul>
+					<div class="modal-footer">
+						<strong class="modal-price" data-modal-price></strong>
+						<button class="primary-button" type="button" data-modal-add>Dodaj do koszyka</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<template id="product-card-template">
+		<article class="product-card">
+			<div class="product-badge"></div>
+			<div class="product-media"></div>
+			<div class="product-body">
+				<p class="product-category"></p>
+				<h3 class="product-title"></h3>
+				<p class="product-description"></p>
+				<div class="product-footer">
+					<strong class="product-price"></strong>
+					<div class="product-actions">
+						<button type="button" class="ghost-button" data-action="details">Zobacz</button>
+						<button type="button" class="primary-button" data-action="add">Kup teraz</button>
+					</div>
+				</div>
+			</div>
+		</article>
+	</template>
+</body>
+</html>

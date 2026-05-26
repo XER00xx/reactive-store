@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STRIDE — logowanie</title>
+  <meta name="description" content="Zaloguj się do wirtualnego sklepu STRIDE.">
+  <link rel="stylesheet" href="main.css">
+  <script defer src="app.js"></script>
+  <script defer src="auth.js"></script>
+</head>
+<body data-page="login">
+  <header class="topbar">
+    <a class="brand" href="mian.html" aria-label="STRIDE - strona główna">
+      <span class="brand-mark">S</span>
+      <span class="brand-text">STRIDE</span>
+    </a>
+
+    <nav class="nav">
+      <a href="mian.html#kolekcja">Kolekcja</a>
+      <a href="regulamin.html">Regulamin</a>
+      <a href="login.html">Logowanie</a>
+    </nav>
+
+    <div class="topbar-actions">
+      <div class="user-chip">
+        <span class="user-dot"></span>
+        <span data-user-label>Gość</span>
+      </div>
+      <a class="icon-button" href="mian.html">Powrót</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="auth-layout reveal visible">
+      <div class="auth-intro">
+        <span class="eyebrow">Konto użytkownika</span>
+        <h1>Witamy ponownie w STRIDE.</h1>
+        <p>
+          Zaloguj się, aby zachować imię użytkownika po zamknięciu strony,
+          oraz wrócić do koszyka i kolekcji w dowolnym momencie.
+        </p>
+        <div class="auth-highlights">
+          <article>
+            <strong>Persist</strong>
+            <span>lokalne zapisanie sesji</span>
+          </article>
+          <article>
+            <strong>Fast</strong>
+            <span>prosty formularz demo</span>
+          </article>
+        </div>
+      </div>
+
+      <form class="auth-card" data-login-form>
+        <span class="section-tag">Logowanie</span>
+        <h2>Wejdź do konta</h2>
+
+        <label>
+          <span>Imię</span>
+          <input type="text" name="name" placeholder="Np. Alex" required minlength="2">
+        </label>
+
+        <label>
+          <span>E-mail</span>
+          <input type="email" name="email" placeholder="np. alex@stride.pl" required>
+        </label>
+
+        <label>
+          <span>Hasło</span>
+          <input type="password" name="password" placeholder="Dowolne hasło demo" required minlength="4">
+        </label>
+
+        <button class="primary-button full-width" type="submit">Zapisz i zaloguj</button>
+        <button class="secondary-button full-width" type="button" data-logout>Wyloguj</button>
+
+        <p class="cart-note" data-login-status>
+          To tylko wirtualne logowanie zapisane lokalnie w przeglądarce.
+        </p>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
