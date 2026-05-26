@@ -5,10 +5,10 @@ Overview
 - It runs entirely in the browser (no server). State (user and cart) is stored in `localStorage` for demo persistence.
 
 Pages & purpose
-- `mian.html` — Main storefront (home): product catalogue, filters, search, product details modal, cart drawer, and virtual checkout.
+- `index.html` — Main storefront (home): product catalogue, filters, search, product details modal, cart drawer, and virtual checkout.
 - `login.html` — Login demo: collects `name`, `email`, and `password` and saves a local demo session to `localStorage`.
 - `regulamin.html` — Terms / policy page (static informational content).
-- `mian.html` and `login.html` are integrated: the topbar reads stored user data and updates labels across pages.
+- `index.html` and `login.html` are integrated: the topbar reads stored user data and updates labels across pages.
 
 Key features
 - Product data: defined in `app.js` as a `PRODUCTS` array with id, name, category, price, description and features.
@@ -18,7 +18,7 @@ Key features
 - Accessibility & UX: semantic HTML, aria attributes for overlays/modals, visible state classes and keyboard handling (Escape closes overlays).
 
 How to run
-- Open `mian.html` or `login.html` in a modern browser. No build or server is required.
+- Open `index.html` or `login.html` in a modern browser. No build or server is required.
 - To reset demo state open browser DevTools → Application → Local Storage and remove `stride-cart` and `stride-user` keys.
 
 Developer notes
@@ -27,7 +27,7 @@ Developer notes
 - The code is intentionally simple and client-side only — not suited for production authentication or payments.
 
 Files
-- `mian.html`, `login.html`, `regulamin.html` — markup
+- `index.html`, `login.html`, `regulamin.html` — markup
 - `app.js` — products, rendering, cart and main UI logic
 - `auth.js` — demo login logic
 - `main.css` — styles
