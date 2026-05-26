@@ -31,6 +31,3 @@ Files
 - `app.js` — products, rendering, cart and main UI logic
 - `auth.js` — demo login logic
 - `main.css` — styles
-
-Contact / Next steps
-- If you want, I can translate this README to Polish, add usage examples, or split developer vs. user guides.
